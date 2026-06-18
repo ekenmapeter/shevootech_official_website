@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shevootech Technologies Limited | Web, AI, Graphic & Animation Solutions</title>
+    <meta name="description"
+        content="Shevootech Technologies Limited provides cutting-edge website development, AI solutions, graphic design, and 2D animation services. Top Web Design Agency in Lagos & AI Solutions in Nigeria.">
+    <meta name="keywords"
+        content="web development, AI solutions, graphic design, 2D animation, digital agency, Nigeria tech company, Web Design Agency in Lagos, AI Solutions Nigeria">
+    <meta name="author" content="Shevootech Technologies Limited">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/logo.png" type="image/png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shevootech.com.ng/">
+    <meta property="og:title" content="Shevootech Technologies Limited | Web, AI, Graphic & Animation Solutions">
+    <meta property="og:description"
+        content="Cutting-edge digital solutions including web development, AI, graphic design, and 2D animation services.">
+    <meta property="og:image" content="https://shevootech.com.ng/images/social-preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://shevootech.com.ng/">
+    <meta property="twitter:title" content="Shevootech Technologies Limited | Web, AI, Graphic & Animation Solutions">
+    <meta property="twitter:description"
+        content="Cutting-edge digital solutions including web development, AI, graphic design, and 2D animation services.">
+    <meta property="twitter:image" content="https://shevootech.com.ng/images/social-preview.jpg">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-gradient {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(79, 70, 229, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+            }
+        }
+
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid var(--primary);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation:
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: var(--primary);
+            }
+        }
+
+        .scroll-down {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <img src="/images/logo.png" alt="Shevootech Logo" class="h-8 w-auto">
+                        <span class="ml-2 text-xl font-bold text-gray-900">Shevootech</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Home</a>
+                    <a href="#services" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Services</a>
+                    <a href="#projects" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Projects</a>
+                    <a href="#about" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">About</a>
+                    <a href="#contact" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Contact</a>
+                    <a href="#contact"
+                        class="bg-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:bg-indigo-700 transition duration-300">Get
+                        Quote</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button
+                        class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-indigo-600 focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600">Home</a>
+                <a href="#services"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600">Services</a>
+                <a href="#projects"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600">Projects</a>
+                <a href="#about"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600">About</a>
+                <a href="#contact"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600">Contact</a>
+                <a href="#contact"
+                    class="block w-full bg-indigo-600 text-white px-6 py-2 rounded-full font-medium text-center hover:bg-indigo-700 transition duration-300 mt-2">Get
+                    Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left" data-aos="fade-right">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        <span class="block">Digital Solutions for</span>
+                        <span class="block text-gradient">Your Business Growth</span>
+                    </h1>
+                    <p
+                        class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        We craft innovative web, AI, graphic, and animation solutions that help your business stand out
+                        and thrive in the digital world.
+                    </p>
+                    <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+                        <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                            <a href="#contact"
+                                class="px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 transition duration-300">
+                                Get Started
+                            </a>
+                            <a href="#projects"
+                                class="px-8 py-3 border border-transparent text-base font-medium rounded-full text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10 transition duration-300">
+                                View Our Work
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
+                    data-aos="fade-left">
+                    <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
+                        <div class="relative block w-full bg-white rounded-lg overflow-hidden">
+                            <img class="w-full h-auto floating"
+                                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Digital solutions illustration">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 flex justify-center scroll-down" data-aos="fade-up">
+            <a href="#services" class="text-gray-400 hover:text-indigo-600">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Services</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    What We Offer
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Comprehensive digital solutions tailored to your business needs
+                </p>
+            </div>
+
+            <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <!-- Web Development -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-indigo-500 border border-transparent"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <i class="fas fa-code text-xl"></i>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Web Development</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Custom websites and web applications built with modern technologies for optimal performance and
+                        user experience.
+                    </p>
+                    <div class="mt-4">
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
+                            HTML/CSS/JS
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 ml-2">
+                            React/Vue
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 ml-2">
+                            Node.js
+                        </span>
+                    </div>
+                </div>
+
+                <!-- AI Solutions -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-indigo-500 border border-transparent"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <i class="fas fa-brain text-xl"></i>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">AI Solutions</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Intelligent systems and automation powered by artificial intelligence to streamline your
+                        business processes.
+                    </p>
+                    <div class="mt-4">
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
+                            Machine Learning
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 ml-2">
+                            Chatbots
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 ml-2">
+                            Data Analysis
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Graphic Design -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-indigo-500 border border-transparent"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <i class="fas fa-paint-brush text-xl"></i>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Graphic Design</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Stunning visual designs that communicate your brand message effectively and leave a lasting
+                        impression.
+                    </p>
+                    <div class="mt-4">
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
+                            Branding
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 ml-2">
+                            Logos
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 ml-2">
+                            Marketing
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 2D Animation -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-indigo-500 border border-transparent"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <i class="fas fa-film text-xl"></i>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">2D Animation</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Engaging animated content that tells your story, explains complex concepts, and captivates your
+                        audience.
+                    </p>
+                    <div class="mt-4">
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
+                            Explainer Videos
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 ml-2">
+                            Motion Graphics
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 ml-2">
+                            Character Design
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="#contact"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300">
+                    Discuss Your Project
+                    <svg class="ml-3 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Portfolio</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Our Recent Projects
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    See how we've helped businesses like yours achieve their digital goals
+                </p>
+            </div>
+
+            <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Project 1 -->
+                <div class="project-card group relative" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                            alt="E-commerce website project" class="h-full w-full object-cover object-center">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <h3 class="text-lg font-bold text-white">GetOsusu</h3>
+                            <p class="mt-1 text-sm text-gray-300">E-commerce with installment payment plans</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-900">
+                                <a href="https://getosusu.com" target="_blank">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    GetOsusu
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-gray-500">Startup E-commerce</p>
+                        </div>
+                        <a href="https://getosusu.com" target="_blank" class="text-sm font-medium text-indigo-600">Visit
+                            Site</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card group relative" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="AI chatbot project" class="h-full w-full object-cover object-center">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <h3 class="text-lg font-bold text-white">PlutExchange</h3>
+                            <p class="mt-1 text-sm text-gray-300">Gift Card & Crypto Exchange Platform</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-900">
+                                <a href="https://www.plutexchange.com" target="_blank">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    PlutExchange
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-gray-500">Laravel 9, Tailwind, AlpineJs</p>
+                        </div>
+                        <a href="https://www.plutexchange.com" target="_blank"
+                            class="text-sm font-medium text-indigo-600">Visit Site</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card group relative" data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1636&q=80"
+                            alt="Brand identity project" class="h-full w-full object-cover object-center">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <h3 class="text-lg font-bold text-white">IgboMusic</h3>
+                            <p class="mt-1 text-sm text-gray-300">Streaming Platform & Micro Blog</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-900">
+                                <a href="https://igbomusic.com" target="_blank">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    IgboMusic
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-gray-500">Laravel, API, MySQL</p>
+                        </div>
+                        <a href="https://igbomusic.com" target="_blank"
+                            class="text-sm font-medium text-indigo-600">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-indigo-700 bg-indigo-100 hover:bg-indigo-200 transition duration-300">
+                    View All Projects
+                    <svg class="ml-3 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="lg:col-span-5" data-aos="fade-right">
+                    <div class="relative">
+                        <div class="relative rounded-2xl overflow-hidden">
+                            <img loading="lazy" class="w-full h-auto"
+                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Shevootech team">
+                        </div>
+                        <div class="absolute -bottom-8 -right-8 bg-white p-4 rounded-xl shadow-lg" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <img loading="lazy" class="h-12 w-12 rounded-full"
+                                        src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                                        alt="CEO photo">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-bold text-gray-900">Ekenma Peter Nwabueze</h4>
+                                    <p class="text-xs text-gray-500">CEO & Full Stack Developer</p>
+                                    <p class="text-xs text-gray-400">PHP / Laravel / WordPress</p>
+                                    <div class="flex mt-2 space-x-2">
+                                        <a href="https://github.com/ekenmapeter" target="_blank"
+                                            class="text-gray-400 hover:text-indigo-600">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/ekenma-peter-nwabueze" target="_blank"
+                                            class="text-gray-400 hover:text-indigo-600">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                        <a href="#contact" class="text-gray-400 hover:text-indigo-600">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 lg:mt-0 lg:col-span-7" data-aos="fade-left">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        <span class="block">About Shevootech</span>
+                        <span class="block text-indigo-600">Our Story & Values</span>
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-500">
+                        Hello, I'm <strong>Ekenma Peter Nwabueze</strong>, a full-stack Frontend and Backend Developer
+                        from Nigeria. With over 6 years of experience, I specialize in building stunning,
+                        mobile-friendly, and scalable software solutions.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-500">
+                        My expertise spans <strong>PHP (6+ years), Laravel (5+ years), ReactJS, Flutter, and
+                            MySQL</strong>. I love solving complex problems and contributing to innovative startups. At
+                        Shevootech, we bring this technical depth to every project we touch.
+                    </p>
+
+                    <div class="mt-8">
+                        <div class="inline-flex rounded-md shadow">
+                            <a href="#"
+                                class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                                Learn More About Us
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 grid gap-8 sm:grid-cols-2">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900">Innovation</h4>
+                                <p class="mt-1 text-base text-gray-500">
+                                    We constantly explore new technologies and creative approaches to solve problems.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900">Integrity</h4>
+                                <p class="mt-1 text-base text-gray-500">
+                                    Honest communication and ethical business practices are at our core.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900">Collaboration</h4>
+                                <p class="mt-1 text-base text-gray-500">
+                                    We work closely with clients to understand their unique needs and goals.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900">Excellence</h4>
+                                <p class="mt-1 text-base text-gray-500">
+                                    We strive for perfection in every project, delivering only the highest quality work.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-indigo-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-base text-indigo-200 font-semibold tracking-wide uppercase">Testimonials</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                    What Our Clients Say
+                </p>
+            </div>
+
+            <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center">
+                        <svg class="h-8 w-8 text-indigo-600" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                            <path
+                                d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                        </svg>
+                        <div class="ml-4">
+                            <div class="flex items-center">
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                            <p class="mt-1 text-sm text-gray-500">5-star rating</p>
+                        </div>
+                    </div>
+                    <blockquote class="mt-6">
+                        <p class="text-base text-gray-700">
+                            "Shevootech transformed our online presence with a stunning website and effective digital
+                            marketing strategy. Their team was professional, creative, and delivered beyond our
+                            expectations."
+                        </p>
+                    </blockquote>
+                    <div class="mt-6 flex items-center">
+                        <div class="flex-shrink-0">
+                            <img loading="lazy" class="h-10 w-10 rounded-full"
+                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                alt="Sarah Johnson">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">Sarah Johnson</p>
+                            <p class="text-sm text-gray-500">Marketing Director, TechNova</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center">
+                        <svg class="h-8 w-8 text-indigo-600" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                            <path
+                                d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                        </svg>
+                        <div class="ml-4">
+                            <div class="flex items-center">
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                            <p class="mt-1 text-sm text-gray-500">5-star rating</p>
+                        </div>
+                    </div>
+                    <blockquote class="mt-6">
+                        <p class="text-base text-gray-700">
+                            "The AI chatbot developed by Shevootech has reduced our customer service workload by 40%
+                            while improving customer satisfaction. Their technical expertise is impressive."
+                        </p>
+                    </blockquote>
+                    <div class="mt-6 flex items-center">
+                        <div class="flex-shrink-0">
+                            <img loading="lazy" class="h-10 w-10 rounded-full"
+                                src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                alt="Michael Chen">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">Michael Chen</p>
+                            <p class="text-sm text-gray-500">CTO, RetailSolutions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center">
+                        <svg class="h-8 w-8 text-indigo-600" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                            <path
+                                d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                        </svg>
+                        <div class="ml-4">
+                            <div class="flex items-center">
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                            <p class="mt-1 text-sm text-gray-500">5-star rating</p>
+                        </div>
+                    </div>
+                    <blockquote class="mt-6">
+                        <p class="text-base text-gray-700">
+                            "From the initial branding to our animated explainer videos, Shevootech has been
+                            instrumental in shaping our company's visual identity and digital strategy."
+                        </p>
+                    </blockquote>
+                    <div class="mt-6 flex items-center">
+                        <div class="flex-shrink-0">
+                            <img loading="lazy" class="h-10 w-10 rounded-full"
+                                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                alt="David Wilson">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">David Wilson</p>
+                            <p class="text-sm text-gray-500">Founder, GreenEnergy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Contact Us</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Let's Work Together
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Ready to start your next project? Get in touch today.
+                </p>
+            </div>
+
+            <div class="mt-16 grid gap-8 md:grid-cols-2">
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-right">
+                    <h3 class="text-lg font-medium text-gray-900">Send us a message</h3>
+                    <form class="mt-6 space-y-6" id="discovery-form" action="send_email.php" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                                <div class="mt-1">
+                                    <input type="text" name="name" id="name" autocomplete="name" required
+                                        class="py-3 px-4 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <div class="mt-1">
+                                    <input type="email" name="email" id="email" autocomplete="email" required
+                                        class="py-3 px-4 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="goal" class="block text-sm font-medium text-gray-700">What is your primary
+                                goal?</label>
+                            <div class="mt-1">
+                                <select id="goal" name="goal"
+                                    class="py-3 px-4 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option>Increase Sales / Leads</option>
+                                    <option>Improve Branding / Awareness</option>
+                                    <option>Automate Processes (AI/Chatbots)</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="budget" class="block text-sm font-medium text-gray-700">Estimated
+                                    Budget</label>
+                                <div class="mt-1">
+                                    <select id="budget" name="budget"
+                                        class="py-3 px-4 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                                        <option value="" disabled selected>Select range</option>
+                                        <option>Less than ₦500,000</option>
+                                        <option>₦500,000 - ₦2,000,000</option>
+                                        <option>₦2,000,000 - ₦5,000,000</option>
+                                        <option>₦5,000,000+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="timeline" class="block text-sm font-medium text-gray-700">Launch
+                                    Timeline</label>
+                                <div class="mt-1">
+                                    <select id="timeline" name="timeline"
+                                        class="py-3 px-4 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                                        <option value="" disabled selected>Select timeline</option>
+                                        <option>As soon as possible</option>
+                                        <option>Within 1 month</option>
+                                        <option>1-3 months</option>
+                                        <option>Just exploring</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Additional Details
+                                (Optional)</label>
+                            <div class="mt-1">
+                                <textarea id="message" name="message" rows="3"
+                                    class="py-3 px-4 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="submit" id="submit-btn"
+                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300">
+                                <span id="btn-text">Get My Strategy & Quote</span>
+                                <svg id="btn-loader" class="animate-spin ml-2 h-5 w-5 text-white hidden"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                        stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor"
+                                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-left">
+                    <h3 class="text-lg font-medium text-gray-900">Contact Information</h3>
+                    <div class="mt-6 space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-base font-medium text-gray-900">Address</h4>
+                                <p class="mt-1 text-base text-gray-500">
+                                    PLOT 493 SABO LUBGE EXTENSION AIRPORT ROAD ABUJA<br>
+                                    FCT, Nigeria
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-base font-medium text-gray-900">Phone</h4>
+                                <p class="mt-1 text-base text-gray-500">
+                                    +234 703 163 3778<br>
+                                    +234 803 568 5833<br>
+                                    Mon-Fri, 9am-5pm
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-base font-medium text-gray-900">Email</h4>
+                                <p class="mt-1 text-base text-gray-500">
+                                    info@shevootech.com.ng<br>
+                                    support@shevootech.com.ng
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-6">
+                            <h4 class="text-base font-medium text-gray-900">Connect With Us</h4>
+                            <div class="mt-4 flex space-x-6">
+
+                                <a href="https://www.linkedin.com/in/ekenma-peter-nwabueze/"
+                                    class="text-gray-400 hover:text-indigo-600">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+                                <a href="https://github.com/ekenmapeter" class="text-gray-400 hover:text-indigo-600">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-indigo-700 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="lg:col-span-1" data-aos="fade-right">
+                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                        Stay Updated
+                    </h2>
+                    <p class="mt-3 max-w-3xl text-lg leading-6 text-indigo-200">
+                        Subscribe to our newsletter for the latest updates, tips, and exclusive offers.
+                    </p>
+                </div>
+                <div class="mt-8 lg:mt-0 lg:col-span-1" data-aos="fade-left">
+                    <form class="sm:flex">
+                        <label for="email-address" class="sr-only">Email address</label>
+                        <input id="email-address" name="email" type="email" autocomplete="email" required
+                            class="w-full px-5 py-3 border border-transparent placeholder-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white focus:border-white sm:max-w-xs rounded-md"
+                            placeholder="Enter your email">
+                        <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                            <button type="submit"
+                                class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white transition duration-300">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                    <p class="mt-3 text-sm text-indigo-200">
+                        We care about your data. Read our <a href="#" class="text-white font-medium underline">Privacy
+                            Policy</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <a href="#" class="flex items-center">
+                        <img src="/images/logo.png" alt="Shevootech Logo" class="h-8 w-auto">
+                        <span class="ml-2 text-xl font-bold text-white">Shevootech</span>
+                    </a>
+                    <p class="text-gray-300 text-base">
+                        Empowering businesses through innovative digital solutions.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Solutions
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Web Development
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        AI Solutions
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Graphic Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        2D Animation
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Company
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        About
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Careers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Support
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Help Center
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Documentation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Community
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Status
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Legal
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Privacy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Terms
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Cookie Policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8">
+                <p class="text-base text-gray-400 text-center">
+                    &copy; 2024 Shevootech Online Limited. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.link/e8dn65"
+        class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition duration-300 z-50 pulse">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        // Mobile menu toggle
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+
+        // Form Submission Handling
+        document.getElementById('discovery-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const form = this;
+            const submitBtn = document.getElementById('submit-btn'); // Renamed to avoid conflict with 'btn'
+            const btnText = document.getElementById('btn-text');
+            const btnLoader = document.getElementById('btn-loader');
+
+            // Show Loader
+            submitBtn.disabled = true;
+            btnText.textContent = 'Sending...';
+            btnLoader.classList.remove('hidden');
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        Swal.fire({
+                            title: 'Success!',
+                            text: data.message,
+                            icon: 'success',
+                            confirmButtonColor: '#4f46e5'
+                        });
+                        form.reset();
+                    } else {
+                        Swal.fire({
+                            title: 'Error!',
+                            text: data.message,
+                            icon: 'error',
+                            confirmButtonColor: '#4f46e5'
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Something went wrong. Please try again later.',
+                        icon: 'error',
+                        confirmButtonColor: '#4f46e5'
+                    });
+                })
+                .finally(() => {
+                    // Reset Button
+                    submitBtn.disabled = false;
+                    btnText.textContent = 'Get My Strategy & Quote';
+                    btnLoader.classList.add('hidden');
+                });
+        });
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                if (!document.querySelector('.mobile-menu').classList.contains('hidden')) {
+                    document.querySelector('.mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Typewriter effect
+        function typeWriter(element, text, i) {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(function () { typeWriter(element, text, i) }, 100);
+            }
+        }
+
+        // Start typewriter effect on elements with class 'typewriter'
+        document.querySelectorAll('.typewriter').forEach(el => {
+            const text = el.textContent;
+            el.textContent = '';
+            typeWriter(el, text, 0);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Shevootech Technologies Limited</title>
+    <meta name="description" content="Explore our comprehensive digital services including web development, AI solutions, graphic design, and 2D animation.">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+
+    <style>
+        :root { --primary: #4f46e5; --primary-dark: #4338ca; --secondary: #10b981; --dark: #1e293b; --light: #f8fafc; }
+        body { font-family: 'Poppins', sans-serif; background-color: #f8fafc; scroll-behavior: smooth; }
+        .text-gradient { background: linear-gradient(90deg, var(--primary), var(--secondary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-gradient { background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
+        .floating { animation: floating 3s ease-in-out infinite; }
+        @keyframes floating { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+    </style>
+</head>
+
+<body class="antialiased">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="{{ url('/') }}" class="flex items-center">
+                        <img src="/images/logo.png" alt="Shevootech Logo" class="h-8 w-auto">
+                        <span class="ml-2 text-xl font-bold text-gray-900">Shevootech</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="{{ url('/') }}" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Home</a>
+                    <a href="{{ route('services.index') }}" class="text-indigo-600 px-3 py-2 font-medium">Services</a>
+                    <a href="{{ route('portfolio.index') }}" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Portfolio</a>
+                    <a href="{{ route('blog.index') }}" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Blog</a>
+                    <a href="{{ route('tools.index') }}" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Tools</a>
+                    <a href="{{ route('store.index') }}" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Store</a>
+                    @auth
+                    <a href="{{ route('dashboard') }}" class="bg-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:bg-indigo-700 transition duration-300">Dashboard</a>
+                    @else
+                    <a href="{{ route('login') }}" class="bg-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:bg-indigo-700 transition duration-300">Login</a>
+                    @endauth
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-indigo-600 focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="{{ url('/') }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600">Home</a>
+                <a href="{{ route('services.index') }}" class="block px-3 py-2 text-base font-medium text-indigo-600">Services</a>
+                <a href="{{ route('portfolio.index') }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600">Portfolio</a>
+                <a href="{{ route('blog.index') }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600">Blog</a>
+                <a href="{{ route('tools.index') }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600">Tools</a>
+                <a href="{{ route('store.index') }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600">Store</a>
+                @auth
+                <a href="{{ route('dashboard') }}" class="block w-full bg-indigo-600 text-white px-6 py-2 rounded-full font-medium text-center hover:bg-indigo-700 transition duration-300 mt-2">Dashboard</a>
+                @else
+                <a href="{{ route('login') }}" class="block w-full bg-indigo-600 text-white px-6 py-2 rounded-full font-medium text-center hover:bg-indigo-700 transition duration-300 mt-2">Login</a>
+                @endauth
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 bg-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white">Our Services</h1>
+            <p class="mt-4 text-xl text-indigo-100 max-w-3xl mx-auto">Comprehensive digital solutions tailored to your business needs</p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            @if(isset($services) && count($services) > 0)
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                @foreach($services as $index => $service)
+                <div class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300" data-aos="fade-up" data-aos-delay="{{ ($index + 1) * 100 }}">
+                    <div class="flex items-center justify-center h-14 w-14 rounded-xl bg-indigo-500 text-white text-2xl">
+                        <i class="{{ $service->icon ?? 'fas fa-cog' }}"></i>
+                    </div>
+                    <h3 class="mt-6 text-xl font-semibold text-gray-900">{{ $service->title }}</h3>
+                    <p class="mt-3 text-gray-500 leading-relaxed">{{ $service->description }}</p>
+                    @if($service->price_from)
+                    <p class="mt-4 text-lg font-bold text-indigo-600">From ₦{{ number_format($service->price_from) }}</p>
+                    @endif
+                    @if(isset($service->features) && count($service->features) > 0)
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        @foreach(array_slice($service->features, 0, 4) as $feature)
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">{{ $feature }}</span>
+                        @endforeach
+                    </div>
+                    @endif
+                </div>
+                @endforeach
+            </div>
+            @else
+            <div class="text-center py-20">
+                <i class="fas fa-concierge-bell text-6xl text-gray-300 mb-6"></i>
+                <p class="text-2xl text-gray-400">No services available at the moment.</p>
+            </div>
+            @endif
+        </div>
+    </section>
+
+    <section class="py-16 bg-indigo-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-extrabold text-white">Need a Custom Solution?</h2>
+            <p class="mt-4 text-xl text-indigo-200">Let's discuss your project and create something amazing together.</p>
+            <a href="{{ url('/#contact') }}" class="mt-8 inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-indigo-700 bg-white hover:bg-indigo-50 transition duration-300">
+                Get in Touch <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <a href="{{ url('/') }}" class="flex items-center">
+                        <img src="/images/logo.png" alt="Shevootech Logo" class="h-8 w-auto">
+                        <span class="ml-2 text-xl font-bold text-white">Shevootech</span>
+                    </a>
+                    <p class="text-gray-300 text-base">Empowering businesses through innovative digital solutions.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/ekenma-peter-nwabueze/" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/ekenmapeter" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Solutions</h3>
+                            <ul class="mt-4 space-y-4">
+                                <li><a href="{{ route('services.index') }}" class="text-base text-gray-400 hover:text-white">Web Development</a></li>
+                                <li><a href="{{ route('services.index') }}" class="text-base text-gray-400 hover:text-white">AI Solutions</a></li>
+                                <li><a href="{{ route('services.index') }}" class="text-base text-gray-400 hover:text-white">Graphic Design</a></li>
+                                <li><a href="{{ route('services.index') }}" class="text-base text-gray-400 hover:text-white">2D Animation</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Company</h3>
+                            <ul class="mt-4 space-y-4">
+                                <li><a href="{{ url('/#about') }}" class="text-base text-gray-400 hover:text-white">About</a></li>
+                                <li><a href="{{ route('blog.index') }}" class="text-base text-gray-400 hover:text-white">Blog</a></li>
+                                <li><a href="{{ route('portfolio.index') }}" class="text-base text-gray-400 hover:text-white">Portfolio</a></li>
+                                <li><a href="{{ url('/#contact') }}" class="text-base text-gray-400 hover:text-white">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Resources</h3>
+                            <ul class="mt-4 space-y-4">
+                                <li><a href="{{ route('tools.index') }}" class="text-base text-gray-400 hover:text-white">Free Tools</a></li>
+                                <li><a href="{{ route('store.index') }}" class="text-base text-gray-400 hover:text-white">Marketplace</a></li>
+                                <li><a href="{{ route('blog.index') }}" class="text-base text-gray-400 hover:text-white">Tutorials</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Legal</h3>
+                            <ul class="mt-4 space-y-4">
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Privacy</a></li>
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Terms</a></li>
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Cookie Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8">
+                <p class="text-base text-gray-400 text-center">&copy; {{ date('Y') }} Shevootech Technologies Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.link/e8dn65" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition duration-300 z-50 pulse">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        document.querySelector("button.mobile-menu-button")?.addEventListener("click", () => {
+            document.querySelector(".mobile-menu")?.classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>
