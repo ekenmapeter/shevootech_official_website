@@ -28,7 +28,12 @@ class AuthenticatedSessionController extends Controller
         try {
             $request->authenticate();
         } catch (ValidationException $e) {
-            return redirect()->back()->with('error', $e->getMessage())->withInput();
+            // Grab the first validation error message (usually for the email field)
+            $errors = $e->errors();
+            $firstMessage = collect($errors)->flatten()->first();
+            return redirect()->back()
+                ->with('error', $firstMessage ?? $e->getMessage())
+                ->withInput();
         }
 
         $request->session()->regenerate();
