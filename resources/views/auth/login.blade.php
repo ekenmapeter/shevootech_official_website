@@ -114,7 +114,7 @@
         }
     </style>
 </head>
-<body class="bg-auth min-h-screen flex items-center justify-center p-4" x-data="{ showError: {{ session('error') ? true : false }} }" x-cloak>
+<body class="bg-auth min-h-screen flex items-center justify-center p-4" x-data="{ showError: @json(session()->has('error')) }" x-cloak>
     <!-- Error Modal -->
     <div x-show="showError" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
         <div class="bg-red-600 text-white p-6 rounded-lg shadow-xl animate-fade-in">
