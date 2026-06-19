@@ -35,11 +35,17 @@
                 <a href="{{ route('tools.index') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Tools</a>
                 <a href="{{ route('store.index') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Store</a>
             </div>
-            <div>
+            <div class="flex items-center space-x-2">
                 @auth
-                <a href="{{ route('dashboard') }}" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-500">Dashboard</a>
+                <a href="{{ route('dashboard') }}" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-500 transition-colors">Dashboard</a>
+                <form method="POST" action="{{ route('logout') }}" class="inline">
+                    @csrf
+                    <button type="submit" class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-500 transition-colors">
+                        Logout
+                    </button>
+                </form>
                 @else
-                <a href="{{ route('login') }}" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-500">Login</a>
+                <a href="{{ route('login') }}" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-500 transition-colors">Login</a>
                 @endauth
             </div>
         </nav>
@@ -47,6 +53,7 @@
 
     <main class="flex-grow container mx-auto px-4 py-8">
         @yield('content')
+        {{ $slot ?? '' }}
     </main>
 
     <footer class="bg-gray-100 dark:bg-gray-800 py-4 text-center text-gray-600 dark:text-gray-400">
