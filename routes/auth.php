@@ -25,11 +25,7 @@ Route::middleware('guest')->group(function () {
 
     Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
-    // Admin panel login (mirrors standard login)
-    Route::get('admin/login', [AuthenticatedSessionController::class, 'create'])
-        ->name('admin.login');
 
-    Route::post('admin/login', [AuthenticatedSessionController::class, 'store']);
 
 
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
