@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <style>
         :root {
             --primary: #4f46e5;
@@ -104,9 +105,28 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .animate-fade-in{
+            animation: fadeIn .3s ease-out forwards;
+        }
+        @keyframes fadeIn{
+            from{opacity:0;transform:scale(.95);}
+            to{opacity:1;transform:scale(1);}
+        }
     </style>
 </head>
-<body class="bg-auth min-h-screen flex items-center justify-center p-4">
+<body class="bg-auth min-h-screen flex items-center justify-center p-4" x-data="{ showError: {{ session('error') ? 'true' : 'false' }} }" x-cloak>
+    <!-- Error Modal -->
+    <div x-show="showError" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-red-600 text-white p-6 rounded-lg shadow-xl animate-fade-in">
+            <div class="flex items-center justify-between">
+                <h3 class="text-lg font-semibold">Login Error</h3>
+                <button @click="showError = false" class="text-white hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                </button>
+            </div>
+            <p class="mt-2" x-text="'{{ session('error') }}'">{{ session('error') }}</p>
+        </div>
+    </div>
     <div class="w-full max-w-md">
         <div class="text-center mb-8">
             <a href="{{ url('/') }}" class="inline-flex items-center space-x-3 group">
